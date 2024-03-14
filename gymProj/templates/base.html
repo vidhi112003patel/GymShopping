@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fito Fitness - {% block title %}{% endblock title %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+      <div class="container d-flex align-items-center justify-content-lg-between">
+
+          <h1 class="logo me-auto me-lg-0"><a href="/">FITO FITNESS<span>.</span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+          <nav id="navbar" class="navbar order-last order-lg-0">
+              <ul>
+                  <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                  <li><a class="nav-link scrollto" href="/about">About</a></li>
+                  <li><a class="nav-link scrollto" href="/services">Services</a></li>
+                  <li><a class="nav-link scrollto " href="/gallery">ShopNow</a></li>
+                  <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
+                  <li class="dropdown">
+                      <a href="#"><span>Memberships</span> <i class="bi bi-chevron-down"></i></a>
+                      <ul>
+                         <li><a href="/plans">Membership Plans</a></li>
+
+                          <li><a href="/join">Enroll</a></li>
+
+                          <li><a href="/attendance">Attendance</a></li>
+
+                          <li><a href="/profile">View Profile</a></li>
+
+                          
+                      </ul>
+                  </li>
+                  {% if not request.user.is_authenticated %}
+
+                  <li><a class="nav-link scrollto" href="/signup">Signin</a></li>
+
+                  <li><a class="nav-link scrollto" href="/login">Login</a></li>
+                  {% else %}
+                  <li class="dropdown">
+                    <a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/profile">View Profile</a></li>
+    
+                        <li><a href="/join">Enroll</a></li>
+    
+                        <li><a href="/profile">View Profile</a></li>
+                    </ul>
+                </li>
+                  <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+
+
+                  {% endif %}
+
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+
+          {% if  request.user.is_authenticated %}
+          <a href="/" class="get-started-btn scrollto">Welcome</a>
+          {% endif %}
+
+      </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+         
+
+{% block head %}
+
+
+{% endblock head %}
+
+
+        </div>
+      </div>
+
+     
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    {% block body %}
+    
+    
+    
+    
+    {% endblock body %}
+  </main>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>

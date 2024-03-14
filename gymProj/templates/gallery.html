@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block title %}
+Gallery
+{% endblock title %}
+{% block body %}
+
+<div class="container mt-2">
+<Center><h1>Shop Now</h1></Center>
+<div class="row">
+
+
+{% for post in posts  %}  
+<div class="col-md-4">
+
+
+
+      <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+  
+  
+          <div class="row">
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                <div class="card">
+                  <img src="{{post.img.url}}" class="card-img-top" alt="..." style="width: 400px; height: 200px;">
+            
+                    <div class="icon-box">
+                      <a href="/shop/?category={{category.id}}"><h5 class="card-title">{{post.name}}</h5></a>
+                      <!--<p class="card-text">Uploaded On : {{post.timeStamp}} </p>-->
+                    </div>
+                </div>
+                </div>
+              </div>
+          </div>
+  
+        </div>
+      </section>
+
+</div>
+{% endfor %}
+
+
+
+<br>
+<br>
+<section class="membership-section spad">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="section-title">
+                  <h2>MEMBERSHIP PLANS</h2>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4">
+              <section id="chome" class="membership-item">
+                  <div class="mi-title">
+                      <h4>HOME</h4>
+                      <div class="triangle"></div>
+                  </div>
+                  <h2 class="mi-price">&#8377;17<span>/01 mo</span></h2>
+                  <ul>
+                      <li>
+                          <p>Duration</p>
+                          <span>12 months</span>
+                      </li>
+                      <li>
+                          <p>Personal trainer</p>
+                          <span>00 person</span>
+                      </li>
+                      <li>
+                          <p>Amount of people</p>
+                          <span>01 person</span>
+                      </li>
+                      <li>
+                          <p>Number of visits</p>
+                          <span>Unlimited</span>
+                      </li>
+                  </ul>
+                  <a href="#" class="primary-btn membership-btn">Start Now</a>
+                </section>
+          </div>
+          <div class="col-lg-4">
+              <section id="cpro" class="membership-item">
+                  <div class="mi-title">
+                      <h4>PRO</h4>
+                      <div class="triangle"></div>
+                  </div>
+                  <h2 class="mi-price">&#8377;57<span>/01 mo</span></h2>
+                  <ul>
+                      <li>
+                          <p>Duration</p>
+                          <span>12 months</span>
+                      </li>
+                      <li>
+                          <p>Personal trainer</p>
+                          <span>01 person</span>
+                      </li>
+                      <li>
+                          <p>Amount of people</p>
+                          <span>01 person</span>
+                      </li>
+                      <li>
+                          <p>Number of visits</p>
+                          <span>Unlimited</span>
+                      </li>
+                  </ul>
+                  <a href="#" class="primary-btn membership-btn">Start Now</a>
+                </section>
+          </div>
+          <div class="col-lg-4">
+              <section id="celite" class="membership-item">
+                  <div class="mi-title">
+                      <h4>ELITE</h4>
+                      <div class="triangle"></div>
+                  </div>
+                  <h2 class="mi-price">&#8377;98<span>/01 mo</span></h2>
+                  <ul>
+                      <li>
+                          <p>Duration</p>
+                          <span>12 months</span>
+                      </li>
+                      <li>
+                          <p>Personal trainer</p>
+                          <span>01 person</span>
+                      </li>
+                      <li>
+                          <p>Amount of people</p>
+                          <span>01 person</span>
+                      </li>
+                      <li>
+                          <p>Number of visits</p>
+                          <span>Unlimited</span>
+                      </li>
+                  </ul>
+                  <a href="#" class="primary-btn membership-btn">Start Now</a>
+                </section>
+          </div>
+
+          <div class="col-lg-4">
+            <section id="ctransform" class="membership-item">
+                <div class="mi-title">
+                    <h4>TRANSFORM</h4>
+                    <div class="triangle"></div>
+                </div>
+                <h2 class="mi-price">&#8377;98<span>/01 mo</span></h2>
+                <ul>
+                    <li>
+                        <p>Duration</p>
+                        <span>12 months</span>
+                    </li>
+                    <li>
+                        <p>Personal trainer</p>
+                        <span>01 person</span>
+                    </li>
+                    <li>
+                        <p>Amount of people</p>
+                        <span>01 person</span>
+                    </li>
+                    <li>
+                        <p>Number of visits</p>
+                        <span>Unlimited</span>
+                    </li>
+                </ul>
+                <a href="#" class="primary-btn membership-btn">Start Now</a>
+            </section>
+          </div>
+      </div>
+  </div>
+</section>
+
+</div>
+</div>
+
+
+
+
+
+{% endblock body %}

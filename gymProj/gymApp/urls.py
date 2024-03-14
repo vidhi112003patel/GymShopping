@@ -22,7 +22,8 @@ urlpatterns = [
     path("search/", views.search, name="search"),
     path("tracker/", views.tracker, name="tracker"),
     path("change_password/", views.change_password, name="change_password"),
-    
+    path("loggedin_contact/", views.loggedin_contact, name="loggedin_contact"),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

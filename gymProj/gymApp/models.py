@@ -1,6 +1,7 @@
 from distutils.command.upload import upload
+from django.contrib.auth.models import User
 from django.db import models
-
+from django.utils.timezone import now
 # Create your models here.
 # this file we creates a database tables
 
@@ -13,7 +14,8 @@ class Contact(models.Model):
     def __str__(self): 
         return self.email
 
-class Customer(models.Model):        
+class Customer(models.Model): 
+    user = models.OneToOneField(User, on_delete=models.CASCADE, default=1)     
     FullName=models.CharField(max_length=25)
     Email=models.EmailField()
     Gender=models.CharField(max_length=25)

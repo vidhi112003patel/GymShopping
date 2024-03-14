@@ -365,4 +365,19 @@ def shop(request):
     return render(request, 'shop.html', data)
 
 
+def loggedin_contact(request):
+    data = cartData(request)
+    items = data['items']
+    order = data['order']
+    cartItems = data['cartItems']
+    if request.method=="POST":       
+        name = request.user
+        email = request.user.email
+        phone = request.user.customer.phone_number
+        desc = request.POST['desc']
+        contact = Contact(name=name, email=email, phone=phone, desc=desc)
+        contact.save()
+        alert = True
+        return render(request, 'loggedin_contact.html', {'alert':alert})
+    return render(request, "loggedin_contact.html", {'cartItems':cartItems})
 

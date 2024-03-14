@@ -11,11 +11,11 @@
     <title>{% block title %} {% endblock %}</title>
     <style>
         .navbar {
-            background-color: #8c5d4f;
+            background-color: hsl(0, 1%, 10%);
         }
 
         body {
-            background-color: hsl(0, 0%, 98%);
+            background-color: #ffffff;
         }
 
         h1,
@@ -30,7 +30,7 @@
         .box-element {
             box-shadow: hsl(0, 0%, 80%) 0 0 16px;
             background-color: #fff;
-            border-radius: 4px;
+            border-radius: 20px;
             padding: 10px;
         }
 
@@ -43,7 +43,8 @@
         }
 
         .product {
-            border-radius: 0 0 4px 4px;
+            /*border-radius: 0 0 4px 4px;*/
+            border-radius: 20px;
         }
 
         #cart-icon {
@@ -60,11 +61,13 @@
         }
 
         .btn {
-            border-radius: 0;
+            border-radius: 20px;
+            background-color: #8cf34f;
         }
 
         .row-image {
             width: 100px;
+            border-radius: 20px;
         }
 
         .form-field {
@@ -115,7 +118,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">DataFlair Online Shopping</a>
+            <a class="navbar-brand" href="/">Fito-Fitness</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -144,21 +147,29 @@
                     {% endif %}
                     {% if not request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/register/">Register</a>
+                        <a class="nav-link active" aria-current="page" href="/signup">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/login/">Login</a>
+                        <a class="nav-link active" aria-current="page" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/contact/">Contact Us</a>
+                        <a class="nav-link active" href="/contact">Contact Us</a>
                     </li>
                     {% else %}
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="dropdown">
+                        <a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/profile">View Profile</a></li>
+        
+                            <li><a href="/join">Enroll</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem;">Welcome {{request.user}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/logout/">Logout</a>
+                        <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
                     </li>
                     {% endif %}
                 </ul>

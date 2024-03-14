@@ -6,3 +6,4 @@ It contain following things:
 -Enrollment
 -category wise section 
 -order and cart view
+-checkout and contact-us
